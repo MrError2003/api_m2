@@ -11,7 +11,7 @@ import { verifyJWT } from "../controllers/auth.controller";
 
 const router = express.Router();
 
-router.get("/planes", verifyJWT, getPlanes);
+router.get("/allplanes", verifyJWT, getPlanes);
 router.get("/plane/:id", verifyJWT, getPlane);
 router.post("/plane", verifyJWT, createPlane);
 router.post("/planes", verifyJWT, createManyPlanes);
