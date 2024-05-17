@@ -1,51 +1,35 @@
-<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-    <div class="mb-10 border-t border-b divide-y">
-
-        <% for (const plane of planes) { %>
-
-            <div class="grid py-8 sm:grid-cols-4">
-                <div class="mb-4 sm:mb-0">
-
-                    <div class="space-y-1 text-xs font-semibold tracking-wide uppercase">
-
-                        <!--Tipo-->
-
-                        <p class="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                            aria-label="Category"><%=plane.typePlane%></p>
-
-                        <br>
-
-                        <!--Modelo-->
-                        <p class="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                            aria-label="Category"><%=plane.modelPlane%></p>
-
-                        <br>
-
-                        <!--Year-->
-                        <p class="text-gray-600"><%=plane.yearPlane%></p>
-
-                        <!--Pais-->
-                        <p class="text-gray-600"><%=plane.countryPlane%></p>
-
-                    </div>
-                </div>
-                <div class="sm:col-span-3 lg:col-span-2">
-                    <div class="mb-3">
-
-                        <!--Nombre-->
-                        <p class="text-3xl font-extrabold leading-none sm:text-4xl xl:text-4xl">
-                            <%=plane.namePlane%>
-                        </p>
-
-                    </div>
-
-                    <!--Descripcion-->
-                    <p class="text-gray-700">
-                        <%=plane.descriptionPlane%>
-                    </p>
-                </div>
-            </div>
-
-        <% } %>
-    </div>
-</div>
+<div class="mb-10 border-t border-b divide-y">
+    <% for (const plane of planes) { %>
+      <div class="grid py-8 sm:grid-cols-4 gap-4">
+        <div class="mb-4 sm:mb-0">
+          <div class="space-y-1 text-xs font-semibold tracking-wide uppercase">
+            <!-- Tipo -->
+            <p class="text-gray-400" aria-label="Category">
+              <%= plane.typePlane %>
+            </p>
+            <!-- Modelo -->
+            <p class="text-gray-400" aria-label="Category">
+              <%= plane.modelPlane %>
+            </p>
+            <!-- Año -->
+            <p class="text-gray-200"><%= plane.yearPlane %></p>
+            <!-- País -->
+            <p class="text-gray-200"><%= plane.countryPlane %></p>
+          </div>
+        </div>
+        <div class="sm:col-span-3 lg:col-span-2">
+          <div class="mb-3">
+            <!-- Nombre -->
+            <p class="text-3xl font-extrabold leading-none sm:text-4xl xl:text-4xl">
+              <%= plane.namePlane %>
+            </p>
+          </div>
+          <!-- Descripción -->
+          <p class="text-gray-200">
+            <%= plane.descriptionPlane %>
+          </p>
+        </div>
+      </div>
+    <% } %>
+  </div>
+  
